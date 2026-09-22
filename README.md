@@ -20,7 +20,7 @@ This repository covers **my part of the project: clustering ~5,000 songs using D
 ### 1. Dimensionality Reduction (PCA)
 Several audio features overlapped heavily — energy, loudness, and acousticness shared up to 85% of their signal. Instead of manually dropping one, PCA was used to merge this redundancy automatically. **3 principal components captured 95% of the variance** in the original 9 features, giving a cleaner, less biased feature space for clustering.
 
-https://claude.ai/chat/pca_explained_variance.png
+![PCA Explained Variance](pca_explained_variance.png)
 
 
 ### 2. Choosing `eps` for DBSCAN
