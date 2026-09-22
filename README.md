@@ -41,7 +41,7 @@ To pick a precise value, DBSCAN was run across a sweep of `eps` values, tracking
 
 `eps = 0.45` was chosen as the point where the cluster count stabilises at 25 with very low noise (<1%) — increasing `eps` further only reduces noise slightly without changing the clustering structure.
 
-![k-distance graph and eps sweep](images/eps_selection.png)
+![k-distance graph and eps sweep](eps_selection.png)
 
 ### 3. Final Model
 
@@ -55,14 +55,14 @@ dbscan.fit(scaled_features_df)
 ### 4. Visualisation (t-SNE)
 The high-dimensional clusters were projected to 2D with t-SNE to visually sanity-check the separation between clusters.
 
-![t-SNE visualisation of DBSCAN clusters](images/tsne_clusters.png)
+![t-SNE visualisation of DBSCAN clusters](tsne_clusters.png)
 
 The clusters are visually distinct and well-separated, suggesting DBSCAN is finding real structure in the audio feature space — not arbitrary splits.
 
 ### 5. Qualitative Validation
 To check whether the clusters actually mean something musically, songs from real Moosic playlists were mapped back to their assigned clusters:
 
-![Playlist samples mapped to clusters](images/playlist_samples.png)
+![Playlist samples mapped to clusters](playlist_samples.png)
 
 - **"Chilling in Vienna"** → dominated by classical composers (Bach, Chopin, Schubert, Mozart)
 - **"Chilling in Berlin"** → dominated by a distinct alt-rock/indie cluster
